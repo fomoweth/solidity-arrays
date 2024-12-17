@@ -1,19 +1,33 @@
-## Foundry
+## Solidity-Arrays
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Implementation of JS built-in array functions in Solidity
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+- [reduce](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L9)
+- [map](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L27)
+- [filter](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L44)
+- [forEach](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L73)
+- [find](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L85)
+- [indexOf](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L100)
+- [includes](https://github.com/fomoweth/solidity-arrays/blob/7ed8890dc9f430e69ea9104bef635fb182e8c409/src/libraries/Arrays.sol#L114)
 
 ## Usage
+
+Create `.env` file with the following content:
+
+```text
+# Using Infura
+INFURA_API_KEY="YOUR_INFURA_API_KEY"
+RPC_ETHEREUM="https://mainnet.infura.io/v3/${INFURA_API_KEY}"
+
+# Using Alchemy
+ALCHEMY_API_KEY="YOUR_ALCHEMY_API_KEY"
+RPC_ETHEREUM="https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+
+# Optional
+ETHERSCAN_API_KEY_ETHEREUM="YOUR_ETHERSCAN_API_KEY"
+ETHERSCAN_URL_ETHEREUM="https://api.etherscan.io/api"
+
+```
 
 ### Build
 
@@ -25,42 +39,4 @@ $ forge build
 
 ```shell
 $ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
