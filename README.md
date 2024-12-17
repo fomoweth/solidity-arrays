@@ -26,7 +26,6 @@ RPC_ETHEREUM="https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
 # Optional
 ETHERSCAN_API_KEY_ETHEREUM="YOUR_ETHERSCAN_API_KEY"
 ETHERSCAN_URL_ETHEREUM="https://api.etherscan.io/api"
-
 ```
 
 ### Build
